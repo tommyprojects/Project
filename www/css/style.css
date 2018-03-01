@@ -7,11 +7,24 @@
 	border-radius: 3px 3px 3px 3px;
 	height: 45px;
 }
-#username, #password {
+#firstName, #lastName, #address, #username, #password, #email {
 	height: 45px;
 	width: 100%;
+	border-bottom: 0px;
+	border-radius: 3px 3px 3px 3px;
 }
 
 .login-form{
 	margin-top: 200px;
+}
+
+.edit-group{
+	border-bottom: 0px;
+	border-radius: 3px 3px 3px 3px;
+	height: 45px;
+	width: 100%;
+}
+
+.edit-form{
+	margin-top: 50px;
 }

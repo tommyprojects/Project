@@ -30,6 +30,7 @@
 <head>
 	<?php include_once('head.php'); ?>
 	<title>Kambu - Panel Administratora</title>
+	<script type="text/javascript" src="js/panel.js"></script>
 </head>
 <body>
 	<?php 
@@ -55,8 +56,12 @@
 				echo "<td>" . $user['username'] . "</td>";
 				echo "<td>" . $user['password'] . "</td>";
 				echo "<td>" . $user['email'] . "</td>";
-				echo "<td><button class='btn btn-success' firstName='". $user['firstName'] ."' lastName='". $user['lastName'] ."' address=" . $user['address'] . " username=" . $user['username'] . " password=" . $user['password'] . " email=" . $user['email'] . " type='button'>Edytuj</button>
-					<button class='btn btn-danger' firstName='". $user['firstName'] ."' lastName='". $user['lastName'] ."' address=" . $user['address'] . " username=" . $user['username'] . " password=" . $user['password'] . " email=" . $user['email'] . " type='button'>Usuń</button></td>";
+				echo "<td>
+					<form method='POST' action='editUserPanel.php'>
+					    <input type='hidden' name='id' value='". $user['userId'] ."' readonly />
+						<button class='btn btn-success edit' userId='". $user['userId'] ."' type='submit'>Edytuj</button>
+					</form>
+					<button class='btn btn-danger delete' type='button' userId='". $user['userId'] . "'>Usuń</button></td>";
 				echo '</tr>';
 			}
 		}
