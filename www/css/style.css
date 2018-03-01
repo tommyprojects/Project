@@ -1,0 +1,17 @@
+.input-group#username-group, .input-group-addon {
+	border-bottom: 0px;
+	border-radius: 3px 3px 3px 3px;
+	height: 45px;
+}
+.input-group#password-group {
+	border-radius: 3px 3px 3px 3px;
+	height: 45px;
+}
+#username, #password {
+	height: 45px;
+	width: 100%;
+}
+
+.login-form{
+	margin-top: 200px;
+}
