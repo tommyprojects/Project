@@ -30,8 +30,8 @@ if (!$connect) {
 			$_SESSION['isLogged'] = true;
 			$_SESSION['idAdmin'] = $assoc['id'];
 			unset($_SESSION['error']);
-			$result->close();
 			header('Location: panel.php');
+			$result->close();
 		}else {
 			$_SESSION['error'] = '<span style="color:red;">Błędny login lub hasło...</span>';
 			header('Location: index.php');

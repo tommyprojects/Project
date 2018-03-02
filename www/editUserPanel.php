@@ -33,25 +33,35 @@ $connect->close();
 	<div class="col-md-12 col-md-offset-3 edit-form">
 		<form action="editUser.php" method="POST">
 				<div class="col-md-6 col-sm-12">
-					<div class="edit-group">
+		                <input type="number" id="userId" placeholder="Identyfikator użytkownika" name="userId" value="<?php echo $_SESSION['user'][0]; ?>" required="" autofocus="" hidden>
+					<div class="edit-group input-group">
+					    <span class="input-group-addon edit-addon">Imię</span>
 		                <input type="text" id="firstName" placeholder="Imię" name="firstName" value="<?php echo $_SESSION['user'][1]; ?>" required="" autofocus="">
 		            </div>
-		            <div class="edit-group">
+		            <div class="edit-group input-group">
+		            	<span class="input-group-addon edit-addon">Nazwisko</span>
 		                <input type="text" id="lastName" placeholder="Naziwsko" name="lastName" value="<?php echo $_SESSION['user'][2]; ?>" required="" autofocus="">
 		            </div>
-		            <div class="edit-group">
+		            <div class="edit-group input-group">
+		            	<span class="input-group-addon edit-addon">Adres</span>
 		                <input type="text" id="address" placeholder="Adres" name="address" value="<?php echo $_SESSION['user'][3]; ?>" required="" autofocus="">
 		            </div>
-					<div class="edit-group">
+					<div class="edit-group input-group">
+						<span class="input-group-addon edit-addon">Nazwa użytkownika</span>
 		                <input type="text" id="username" placeholder="Nazwa Użytkownika" name="username" value="<?php echo $_SESSION['user'][4]; ?>" required="" autofocus="">
 		            </div>
-		            <div class="edit-group">
+		            <div class="edit-group input-group">
+		            	<span class="input-group-addon edit-addon">Hasło</span>
 		                <input type="password" id="password" name="password" placeholder="Hasło" required="" value="<?php echo $_SESSION['user'][5]; ?>">
 	              	</div>
-	              	<div class="edit-group">
+	              	<div class="edit-group input-group">
+	              		<span class="input-group-addon edit-addon">Email</span>
 		                <input type="email" id="email" name="email" placeholder="Email" required="" value="<?php echo $_SESSION['user'][6]; ?>">
 	              	</div>
-	              	<?php
+	              	<?php 
+						if (isset($_SESSION['updateError'])){
+							echo $_SESSION['updateError']; 
+						}
 					?>
 	              <button class="btn btn-md btn-primary btn-block" type="submit">Edytuj</button>
 	            </div>
