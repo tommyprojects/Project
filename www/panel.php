@@ -34,7 +34,7 @@
 </head>
 <body>
 	<?php 
-	echo "<p>Hello ".$_SESSION['admin'].'! [<a href="logout.php">Wyloguj</a>]</p>'; 
+	echo '<p>' . $_SESSION['admin'] . ' [<a href="addUserPanel.php">Stwórz użytkownika</a>] [<a href="logout.php">Wyloguj</a>]</p>'; 
 	if (isset($_SESSION['usersError'])){
 		echo $_SESSION['usersError'];
 	}else{
@@ -59,9 +59,9 @@
 				echo "<td>
 					<form method='POST' action='editUserPanel.php'>
 					    <input type='hidden' name='id' value='". $user['userId'] ."' readonly />
-						<button class='btn btn-success edit' userId='". $user['userId'] ."' type='submit'>Edytuj</button>
+						<button class='btn btn-success edit btn-sm' userId='". $user['userId'] ."' type='submit'>Edytuj</button>
 					</form>
-					<button class='btn btn-danger delete' type='button' userId='". $user['userId'] . "'>Usuń</button></td>";
+					<button class='btn btn-danger delete btn-sm' type='button' userId='". $user['userId'] . "'>Usuń</button></td>";
 				echo '</tr>';
 			}
 		}

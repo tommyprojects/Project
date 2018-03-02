@@ -32,3 +32,13 @@
 .edit-addon {
 	width: 30%;
 }
+
+.delete {
+	width: 55.58px;
+}
+
+@media (max-width: 1100px) and (min-width: 768px) {
+	.edit-addon {
+		width: 32%;
+	}
+}

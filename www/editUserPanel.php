@@ -30,6 +30,7 @@ $connect->close();
 	<title>Kambu - Edytuj użytkownika</title>
 </head>
 <body>
+	<p>[<a href="panel.php">Wróć do głównego panelu</a>]</p>
 	<div class="col-md-12 col-md-offset-3 edit-form">
 		<form action="editUser.php" method="POST">
 				<div class="col-md-6 col-sm-12">
